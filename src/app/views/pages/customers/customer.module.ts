@@ -31,6 +31,8 @@ FullCalendarModule.registerPlugins([
 // ngx-quill
 import { QuillModule } from 'ngx-quill';
 import { CustomersComponent } from './customers.component';
+import { ViewCustomersComponent } from './view-customers/view-customers.component';
+import { CustomerDetailComponent } from './customer-detail/customer-detail.component';
 
 const routes: Routes = [
   {
@@ -39,46 +41,26 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        redirectTo: 'calendar',
-        pathMatch: 'full',
+        redirectTo: 'view-customers',
+        pathMatch: 'full'
       },
       {
-        path: 'email',
-        component: CustomersComponent,
-        children: [
-          {
-            path: '',
-            redirectTo: 'inbox',
-            pathMatch: 'full'
-          },
-          // {
-          //   path: 'inbox',
-          //   component: InboxComponent
-          // },
-          // {
-          //   path: 'read',
-          //   component: ReadComponent
-          // },
-          // {
-          //   path: 'compose',
-          //   component: ComposeComponent
-          // }
-        ]
+        path: 'view-customers',
+        component: ViewCustomersComponent
       },
-      // {
-      //   path: 'chat',
-      //   component: ChatComponent
-      // },
-      // {
-      //   path: 'calendar',
-      //   component: CalendarComponent
-      // },
+      {
+        path: 'customer-details',
+        component: CustomerDetailComponent
+      }
     ]
   }
 ]
 
 @NgModule({
-  declarations: [],
+  declarations: [
+    ViewCustomersComponent,
+    CustomerDetailComponent
+  ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
