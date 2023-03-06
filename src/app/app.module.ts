@@ -12,12 +12,18 @@ import { ErrorPageComponent } from './views/pages/error-page/error-page.componen
 
 import { HIGHLIGHT_OPTIONS } from 'ngx-highlightjs';
 import { CustomersComponent } from './views/pages/customers/customers.component';
+import { OrdersComponent } from './views/pages/orders/orders.component';
+import { OrderDetailsComponent } from './views/pages/orders/order-details/order-details.component';
+import { PendingOrdersComponent } from './views/pages/orders/pending-orders/pending-orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ErrorPageComponent,
     CustomersComponent,
+    OrdersComponent,
+    OrderDetailsComponent,
+    PendingOrdersComponent,
   ],
   imports: [
     BrowserModule,

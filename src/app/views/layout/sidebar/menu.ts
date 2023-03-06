@@ -23,7 +23,7 @@ export const MENU: MenuItem[] = [
     subItems: [
       {
         label: 'Successfull',
-        link: '/apps/email/inbox',
+        link: '/orders',
       },
       {
         label: 'Pending',
